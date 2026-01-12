@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Histoire postale — Articles, marques et itinéraires</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Description -->
+  <meta name="description"
+        content="Site de référence en histoire postale : Petite Poste de Paris, bureaux secondaires, marques postales, courrier administratif, XVIIIe siècle.">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/article.css">
+
+  <!-- JS -->
+
+  <script defer src="./js/menu.js"></script>
+  <script defer src="./js/scroll.js"></script>
+
+      <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./Logo/books_library_1768.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./Logo/books_library_1768.ico">
+    <meta name="theme-color" content="#000000">
+
+</head>
+<body>
+
+<!-- ================= HEADER FIXE ================= -->
+<header>
+  <!-- GAUCHE : menu + logo -->
+  <div class="header-left">
+    <button id="openMenu" class="icon-btn" aria-label="Ouvrir le menu">☰</button>
+    <img src="./Logo/books_library_1768.ico" alt="Logo Histoire postale" class="header-logo">
+  </div>
+
+  <!-- CENTRE : titre -->
+  <div class="header-center">
+    <a class="site-title">
+      <strong>Histoire postale</strong>
+      <small>Études, marques et itinéraires</small>
+    </a>
+  </div>
+
+  <!-- DROITE : recherche -->
+  <div class="header-right">
+    <div class="search-wrapper">
+      <span class="search-icon" aria-hidden="true">🔍</span>
+
+      <input
+        type="search"
+        id="globalSearch"
+        placeholder="Rechercher…"
+        aria-label="Recherche dans la page">
+
+      <button id="btnPrevHit" class="search-nav" aria-label="Résultat précédent">◀</button>
+      <button id="btnNextHit" class="search-nav" aria-label="Résultat suivant">▶</button>
+
+      <span id="globalSearchCount" class="search-count">0</span>
+    </div>
+  </div>
+</header>
+
+<!-- ================= MENU LATÉRAL ================= -->
+<nav id="sideMenu" aria-label="Menu principal">
+  <button id="closeMenu">Fermer ✕</button>
+
+  <h3>Catégories</h3>
+  <ul>
+    <li><a href="./Petit-Poste/petitePosteDeParis.html">Petite Poste de Paris</a></li>
+    <li><a href="./categories/bureaux-secondaires.html">Bureaux secondaires</a></li>
+    <li><a href="./categories/marques-cachets.html">Marques et cachets</a></li>
+    <li><a href="./categories/revolution.html">Révolution & Empire</a></li>
+    <li><a href="./bibliographie.html">Bibliographie</a></li>
+  </ul>
+
+  <h3>Articles</h3>
+  <ul>
+    <li>
+      <a href="./DossieArticles/1lettreFrancheDeSevres.html">
+        Lettre franche de Sèvres — 1793
+      </a>
+    </li>
+    <!-- Articles futurs ajoutés ici -->
+  </ul>
+</nav>
+
+<!-- ================= CONTENU PRINCIPAL ================= -->
+<main id="content">
+
+  <!-- ===== EN-TÊTE DE PAGE ===== -->
+  <section class="article-head">
+    <h1>Bienvenue sur Histoire postale</h1>
+    <p class="meta">
+      Site d’étude consacré aux services postaux français,
+      aux marques manuscrites et cachets,
+      et au fonctionnement concret de la poste aux XVIIᵉ et XVIIIᵉ siècles.
+    </p>
+  </section>
+
+  <!-- ===== SECTION UNIQUE ===== -->
+  <section class="home-section">
+
+    <article class="home-article">
+
+      <h2>Présentation</h2>
+
+      <p>
+        Ce site a pour vocation de proposer des
+        <strong>articles rigoureusement documentés</strong>
+        sur l’histoire postale française, en particulier pour la période
+        de l’Ancien Régime et de la Révolution.
+      </p>
+
+      <p>
+        Les études reposent sur l’examen direct des lettres,
+        l’analyse des marques postales,
+        et le recours systématique aux sources de référence
+        (ouvrages spécialisés, décrets, notices administratives).
+      </p>
+
+      <h2>Derniers articles</h2>
+
+      <h3>
+        <a href="./DossieArticles/1lettreFrancheDeSevres.html">
+          Lettre franche de Sèvres passée par la Petite Poste de Paris en 1793
+        </a>
+      </h3>
+
+      <p>
+        Analyse complète d’une lettre administrative en franchise,
+        depuis son dépôt à Sèvres jusqu’à sa distribution par la Petite Poste,
+        avec étude des marques « SEVE », « PP » triangulaire,
+        et des annotations manuscrites internes.
+      </p>
+
+      <p class="read-more">
+        <a href="./DossieArticles/1lettreFrancheDeSevres.html">
+          Lire l’article →
+        </a>
+      </p>
+
+    </article>
+
+  </section>
+
+</main>
+
+
+<!-- ================= FOOTER FIXE ================= -->
+<footer>
+  © Histoire postale
+</footer>
+<button id="scrollTopBtn"
+        aria-label="Remonter en haut de la page">
+  ↑
+</button>
+  <script src="./js/recherche-simple.js"></script>
+
+</body>
+</html>

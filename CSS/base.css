@@ -1,0 +1,85 @@
+/* =========================================================
+   base.css — Fondations globales
+   Typographie, couleurs, reset léger
+   ========================================================= */
+
+:root{
+  /* Fond */
+  background: url("../Images/carrosseAvecPhoto.jpg") center/cover no-repeat fixed;
+  --paper:#d4c78d;
+
+  /* Texte */
+  --ink:#1f2933;
+  --muted:#4b5563;
+
+  /* Couleurs actives */
+  --accent:#8b2c2c;        /* Rouge postal */
+  --accent2:#1e40af;       /* Bleu profond */
+  --accent3:#f59e0b;       /* Or pour focus */
+
+  --line:#d1d5db;
+  --shadow:rgba(0,0,0,.18);
+
+  --serif:"EB Garamond","Garamond","Georgia",serif;
+  --sans:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+}
+
+/* Reset minimal */
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+}
+
+html,body{
+  margin:0;
+  padding:0;
+}
+
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--serif);
+  line-height:1.65;
+}
+
+/* Liens */
+a{
+  color:var(--accent2);
+  text-decoration:none;
+}
+a:hover{
+  text-decoration:underline;
+}
+
+/* Images */
+img{
+  max-width:100%;
+  height:auto;
+  display:block;
+}
+
+/* Titres */
+h1,h2,h3,h4{
+  font-weight:600;
+  line-height:1.25;
+  margin:1.2em 0 .6em;
+}
+
+p{
+  margin:.8em 0;
+}
+
+/* Sélection */
+::selection{
+  background:#ffe9a6;
+}
+mark.search-hit{
+  background:#ffe08a;
+  padding:0 2px;
+  border-radius:4px;
+}
+
+mark.search-hit-active{
+  outline:2px solid #00000055;
+}
