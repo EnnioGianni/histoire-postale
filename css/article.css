@@ -7,7 +7,7 @@
   background:#d4c78d;;
   border:1px solid var(--line);
   border-radius:14px;
-  padding:-20px;
+  margin:-20px;
   box-shadow:0 8px 20px var(--shadow);
   margin-bottom:18px;
   text-align:center;
@@ -253,4 +253,24 @@ mark.search-hit-active{
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
+}
+/* ================================
+   Sous-titre centré d’article
+   Remplace : style="text-align:center; margin:-10px 0 5px;"
+   ================================ */
+
+.article-subtitle{
+  text-align:center;
+  margin:-10px 0 5px;
+  font-weight:700;
+  letter-spacing:.2px;
+  line-height:1.2;
+}
+
+/* Optionnel : meilleure tenue sur mobile */
+@media (max-width: 600px){
+  .article-subtitle{
+    margin: -6px 0 8px;    /* évite un effet trop “serré” */
+    font-size: 1.05rem;
+  }
 }
