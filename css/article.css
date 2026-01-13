@@ -7,7 +7,7 @@
   background:#d4c78d;;
   border:1px solid var(--line);
   border-radius:14px;
-  margin:-20px;
+  margin: 20px;
   box-shadow:0 8px 20px var(--shadow);
   margin-bottom:18px;
   text-align:center;
@@ -32,7 +32,7 @@ article{
  }
 article p{
   font-size:20px;
-  text-align:justify;
+  text-align: center;
 }
 
 /* ================= IMAGES ================= */
