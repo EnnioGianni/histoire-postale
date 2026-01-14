@@ -5,21 +5,21 @@
   <title>Histoire postale — Articles, marques et itinéraires</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Description -->
+<!-- Description -->
   <meta name="description"
         content="Site de référence en histoire postale : Petite Poste de Paris, bureaux secondaires, marques postales, courrier administratif, XVIIIe siècle.">
 
-  <!-- CSS -->
+<!-- CSS -->
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/layout.css">
   <link rel="stylesheet" href="./css/article.css">
 
-  <!-- JS -->
-
+<!-- JS -->
   <script defer src="./js/menu.js"></script>
   <script defer src="./js/scroll.js"></script>
+  <script defer src="../js/categorieMenu.js"></script>
 
-      <!-- Favicon -->
+<!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="./Logo/books_library_1768.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="./Logo/books_library_1768.ico">
     <meta name="theme-color" content="#000000">
@@ -66,24 +66,7 @@
 <nav id="sideMenu" aria-label="Menu principal">
   <button id="closeMenu">Fermer ✕</button>
 
-  <h3>Catégories</h3>
-  <ul>
-    <li><a href="https://enniogianni.github.io/leger/">Cote des marques postales</a></li>
-    <li><a href="./categories/bureaux-secondaires.html">Bureaux secondaires</a></li>
-    <li><a href="./categories/marques-cachets.html">Marques et cachets</a></li>
-    <li><a href="./categories/revolution.html">Révolution & Empire</a></li>
-    <li><a href="./bibliographie.html">Bibliographie</a></li>
-  </ul>
-
-  <h3>Articles</h3>
-  <ul>
-    <li>
-      <a href="./">
-        Lettre franche de Sèvres — 1793
-      </a>
-    </li>
-    <!-- Articles futurs ajoutés ici -->
-  </ul>
+  <div id="categorie-menu"></div>
 </nav>
 
 <!-- ================= CONTENU PRINCIPAL ================= -->

@@ -411,3 +411,88 @@ footer{
     padding-top: 56px;
   }
 }
+/* ============================================================
+ * MENU ARBORESCENT — categorieMenu.js
+ * Compatible GitHub Pages
+ * ============================================================ */
+
+/* Conteneur principal */
+#categorie-menu {
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+/* Listes */
+#categorie-menu ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+/* Élément de liste */
+#categorie-menu li {
+  margin: 2px 0;
+}
+
+/* ===== DOSSIER ===== */
+#categorie-menu .menu-folder {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 6px 4px;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+/* Survol */
+#categorie-menu .menu-folder:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Indicateur flèche */
+#categorie-menu .menu-folder::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 6px;
+  transition: transform 0.2s ease;
+}
+
+/* Dossier ouvert */
+#categorie-menu .menu-folder[aria-expanded="true"]::before {
+  transform: rotate(90deg);
+}
+
+/* ===== SOUS-MENU ===== */
+#categorie-menu .submenu {
+  padding-left: 16px;
+  margin-left: 6px;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Animation douce */
+#categorie-menu .submenu[hidden] {
+  display: none;
+}
+
+/* ===== LIENS (articles) ===== */
+#categorie-menu a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  padding: 4px 4px 4px 18px;
+}
+
+/* Survol lien */
+#categorie-menu a:hover {
+  text-decoration: underline;
+}
+
+/* ===== ACCESSIBILITÉ ===== */
+#categorie-menu button:focus-visible {
+  outline: 2px solid #caa45a;
+  outline-offset: 2px;
+}

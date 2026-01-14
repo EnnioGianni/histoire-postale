@@ -84,3 +84,42 @@ mark.search-hit{
 mark.search-hit-active{
   outline:2px solid #00000055;
 }
+/* ===== Menu arborescent ===== */
+
+#categorie-menu ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+#categorie-menu li {
+  margin: 4px 0;
+}
+
+/* Bouton dossier */
+.menu-folder {
+  background: none;
+  border: none;
+  padding: 6px 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+
+/* Indicateur visuel */
+.menu-folder::before {
+  content: "▸ ";
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.menu-folder[aria-expanded="true"]::before {
+  transform: rotate(90deg);
+}
+
+/* Sous-menu */
+.submenu {
+  padding-left: 16px;
+}
