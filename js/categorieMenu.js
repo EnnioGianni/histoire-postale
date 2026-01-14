@@ -13,6 +13,15 @@ document.addEventListener("DOMContentLoaded", function () {
   /* ================= DONNÉES DU MENU ================= */
   const menuItems = [
     {
+      label: "Accueil",
+      children: [
+        {
+          label: "Accueil",
+          url: "/index.html"
+        }
+      ]
+    },
+    {
       label: "Cote des marques postales",
       children: [
         {
