@@ -1,8 +1,7 @@
 /* ============================================================
  * categorieMenu.js
- * Menu arborescent repliable — FIX COMPLET
- * Tous les dossiers s’ouvrent à tous les niveaux
- * Compatible GitHub Pages
+ * Menu arborescent repliable — COMPATIBLE GITHUB PAGES
+ * Tous niveaux repliables
  * ============================================================ */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -10,15 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const container = document.getElementById("categorie-menu");
   if (!container) return;
 
-  /* ================= DONNÉES DU MENU ================= */
   const menuItems = [
     {
       label: "Accueil",
       children: [
-        {
-          label: "Accueil",
-          url: "/index.html"
-        }
+        { label: "Accueil", 
+          url: "./index.html" }
       ]
     },
     {
@@ -48,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
           label: "Lettre de Bléré (1783)",
-          url: "../DossierArticles/2lettreDeBlere .html"
+          url: "../DossierArticles/2lettreDeBlere.html"
         },
         {
           label: "Études complémentaires",
@@ -72,17 +68,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   ];
 
-  /* ================= FONCTION RÉCURSIVE ================= */
-
   function buildMenu(items) {
     const ul = document.createElement("ul");
 
     items.forEach(item => {
       const li = document.createElement("li");
 
-      /* ===== DOSSIER ===== */
       if (item.children && item.children.length > 0) {
-
         const btn = document.createElement("button");
         btn.type = "button";
         btn.className = "menu-folder";
@@ -90,28 +82,24 @@ document.addEventListener("DOMContentLoaded", function () {
         btn.setAttribute("aria-expanded", "false");
 
         const subUl = buildMenu(item.children);
-        subUl.classList.add("submenu");
         subUl.hidden = true;
 
         btn.addEventListener("click", function (e) {
-          e.stopPropagation(); // 🔑 CORRECTION CRITIQUE
-          const isOpen = btn.getAttribute("aria-expanded") === "true";
-          btn.setAttribute("aria-expanded", String(!isOpen));
-          subUl.hidden = isOpen;
+          e.stopPropagation();
+          const open = btn.getAttribute("aria-expanded") === "true";
+          btn.setAttribute("aria-expanded", String(!open));
+          subUl.hidden = open;
         });
 
         li.appendChild(btn);
         li.appendChild(subUl);
       }
 
-      /* ===== FEUILLE (LIEN) ===== */
       else if (item.url) {
-
         const a = document.createElement("a");
         a.href = item.url;
         a.textContent = item.label;
 
-        // Lien externe
         if (/^https?:\/\//i.test(item.url)) {
           a.target = "_blank";
           a.rel = "noopener noreferrer";
@@ -126,7 +114,5 @@ document.addEventListener("DOMContentLoaded", function () {
     return ul;
   }
 
-  /* ================= INJECTION ================= */
   container.appendChild(buildMenu(menuItems));
-
 });
