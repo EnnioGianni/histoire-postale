@@ -46,17 +46,9 @@ document.addEventListener("DOMContentLoaded", function () {
           label: "Lettre de Bléré (1783)",
           url: "../DossierArticles/2lettreDeBlere.html"
         },
-        {
-          label: "Études complémentaires",
-          children: [
-            {
-              label: "Lettre administrative (1785)",
-              url: "../DossierArticles/3lettreAdministrative1785.html"
-            }
-          ]
-        }
       ]
     },
+    
     {
       label: "Bibliographie",
       children: [
